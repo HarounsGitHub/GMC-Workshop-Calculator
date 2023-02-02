@@ -1,0 +1,156 @@
+:root {
+    --main-bg: hsl(222, 26%, 31%);
+    --keypad-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+
+    /* text */
+    --text-blue: hsl(221, 14%, 31%);
+    --text-white: hsl(0, 0%, 100%);
+
+    /* keys */
+    --keys-func-bg: hsl(225, 21%, 49%);
+    --keys-func-hover: hsl(255, 51%, 76%);
+    --keys-func-bg-shadow: hsl(224, 28%, 35%);
+
+    --keys-equal-bg: hsl(6, 63%, 50%);
+    --keys-equal-hover: hsl(6, 93%, 67%);
+    --keys-equal-bg-shadow: hsl(6, 70%, 34%);
+
+    --keys-bg: hsl(30, 25%, 89%);
+    --keys-hover: white;
+    --keys-shadow: hsl(28, 16%, 65%);
+
+}
+
+body {
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--text-white);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.theme-container {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.8em;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.theme-title {
+    padding: 5px;
+}
+
+.theme-labels,
+.toggle-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.theme-labels span {
+    display: block;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+}
+
+.toggle-group {
+    background-color: var(--keypad-bg);
+    border-radius: 20px;
+    gap: 5px;
+}
+
+.toggle {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--keys-equal-bg);
+    opacity: 0;
+    cursor: pointer;
+}
+
+.toggle.active {
+    opacity: 1;
+}
+
+.screen {
+    background-color: var(--screen-bg);
+    border-radius: 10px;
+    text-align: right;
+    font-size: 2em;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: var(--keypad-bg);
+}
+
+
+.grid-2 {
+    grid-column: span 2;
+}
+
+.buttons button {
+    font-size: 2em;
+    font-weight: 700;
+    padding: 0.5em;
+    text-transform: uppercase;
+    background-color: var(--keys-bg);
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 3px solid var(--keys-shadow);
+    border-radius: 10px;
+    color: var(--text-blue);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.buttons button:hover {
+    background-color: var(--keys-hover);
+}
+
+.buttons button:active {
+    border-bottom: none;
+}
+
+.buttons button.func {
+    background-color: var(--keys-func-bg);
+    border-bottom-color: var(--keys-func-bg-shadow);
+    color: var(--text-white);
+}
+
+.buttons button.func:hover {
+    background-color: var(--keys-equal-bg);
+}
+
+.buttons button.equal {
+    background-color: var(--keys-equal-bg);
+    border-bottom-color: var(--keys-equal-shadow);
+    color: var(--text-white);
+}
+
+* {
+    font-family: 'League Spartan', sans-serif;
+}
