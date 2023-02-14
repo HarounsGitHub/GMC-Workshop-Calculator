@@ -33,8 +33,8 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
@@ -50,6 +50,15 @@ header h1 {
     margin: 0;
 }
 
+
+
+.theme-labels span {
+    display: block;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+}
+
 .theme-title {
     padding: 5px;
 }
@@ -59,13 +68,6 @@ header h1 {
     display: flex;
     justify-content: space-between;
     padding: 5px;
-}
-
-.theme-labels span {
-    display: block;
-    width: 1em;
-    height: 1em;
-    text-align: center;
 }
 
 .toggle-group {
@@ -142,13 +144,18 @@ header h1 {
 }
 
 .buttons button.func:hover {
-    background-color: var(--keys-equal-bg);
+    background-color: var(--keys-func-hover);
 }
 
 .buttons button.equal {
     background-color: var(--keys-equal-bg);
-    border-bottom-color: var(--keys-equal-shadow);
+    border-bottom-color: var(--keys-equal-bg-shadow);
     color: var(--text-white);
+}
+
+.toggle:hover,
+.buttons button.equal:hover {
+    background-color: var(--keys-equal-hover);
 }
 
 * {
